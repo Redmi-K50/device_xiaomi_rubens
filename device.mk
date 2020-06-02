@@ -77,6 +77,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libvulkan
 
+# DT2W
+PRODUCT_PACKAGES += \
+    DT2W-Service-MT6895
+
 # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
