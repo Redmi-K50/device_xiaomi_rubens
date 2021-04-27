@@ -1,8 +1,8 @@
-type xiaomi_settings, domain;
 binder_call(xiaomi_settings, hal_displayfeature_xiaomi_default)
 binder_call(xiaomi_settings, gpuservice)
 app_domain(xiaomi_settings)
-allow xiaomi_settings system_app_data_file:file lnk_file create_file_perms;
+
+allow xiaomi_settings system_app_data_file:{ file lnk_file } create_file_perms;
 allow xiaomi_settings system_app_data_file:dir create_dir_perms;
 allow xiaomi_settings sysfs_graphics:file rw_file_perms;
 allow xiaomi_settings sysfs_graphics:dir search;

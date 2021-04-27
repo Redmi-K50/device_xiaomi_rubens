@@ -1,1 +1,3 @@
+init_daemon_domain(mtk_hal_camera)
+
 allow mtk_hal_camera default_prop:file { read };

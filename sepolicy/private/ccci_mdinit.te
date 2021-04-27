@@ -1,1 +1,4 @@
+init_daemon_domain(ccci_mdinit)
+wakelock_use(ccci_mdinit)
+
 allow ccci_mdinit init_service_status_private_prop:file { read };
