@@ -3,6 +3,10 @@ ro.audio.silent=0
 ro.audio.usb.period_us=16000
 ro.camera.sound.forced=0
 
+# Blur
+ro.sf.blurs_are_expensive=1
+ro.surface_flinger.supports_background_blur=1
+
 # Brand
 Build.BRAND=MTK
 
