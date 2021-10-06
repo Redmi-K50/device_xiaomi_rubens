@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.sensors;
+package org.lineageos.settings.doze;
 
 import android.content.Context;
 import android.hardware.Sensor;
@@ -23,8 +23,6 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.util.Log;
-
-import org.lineageos.settings.doze.DozeUtils;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -92,7 +90,7 @@ public class ProximitySensor implements SensorEventListener {
         /* Empty */
     }
 
-    public void enable() {
+    protected void enable() {
         if (DEBUG) Log.d(TAG, "Enabling");
         submit(() -> {
             mSensorManager.registerListener(this, mSensor,
@@ -100,7 +98,7 @@ public class ProximitySensor implements SensorEventListener {
         });
     }
 
-    public void disable() {
+    protected void disable() {
         if (DEBUG) Log.d(TAG, "Disabling");
         submit(() -> {
             mSensorManager.unregisterListener(this, mSensor);

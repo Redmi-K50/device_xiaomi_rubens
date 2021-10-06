@@ -4,13 +4,12 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources>
-
     <!-- Ambient settings -->
-    <string name="ambient_enable">Use ambient display</string>
+    <string name="ambient_enable">Enable ambient display</string>
 
     <!-- Dirac settings -->
-    <string name="dirac_enable">Use Mi Sound Enhancer</string>
-    <string name="dirac_title">Mi Sound Enhancer</string>
+    <string name="dirac_enable">Enable dirac</string>
+    <string name="dirac_title">Dirac sound enhancer</string>
     <string name="dirac_summary">Optimize sound quality with Dirac, Hi-Fi</string>
     <string name="dirac_headset_title">Headset type</string>
     <string name="dirac_hifi_enable_title">Enable Hi-Fi</string>

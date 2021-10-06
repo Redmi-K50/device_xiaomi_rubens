@@ -18,7 +18,6 @@ package org.lineageos.settings.display;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.view.MenuItem;
 import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.PreferenceFragment;
@@ -32,12 +31,11 @@ public class DcDimmingSettingsFragment extends PreferenceFragment implements
 
     private SwitchPreference mDcDimmingPreference;
     private static final String DC_DIMMING_ENABLE_KEY = "dc_dimming_enable";
-    private static final String DC_DIMMING_NODE = "/sys/class/mi_display/disp-DSI-0/disp_param";
+    private static final String DC_DIMMING_NODE = "/sys/class/drm/card0-DSI-1/disp_param";
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         addPreferencesFromResource(R.xml.dcdimming_settings);
-        getActivity().getActionBar().setDisplayHomeAsUpEnabled(true);
         mDcDimmingPreference = (SwitchPreference) findPreference(DC_DIMMING_ENABLE_KEY);
         if (FileUtils.fileExists(DC_DIMMING_NODE)) {
             mDcDimmingPreference.setEnabled(true);
@@ -51,18 +49,8 @@ public class DcDimmingSettingsFragment extends PreferenceFragment implements
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (DC_DIMMING_ENABLE_KEY.equals(preference.getKey())) {
-            FileUtils.writeLine(DC_DIMMING_NODE, (Boolean) newValue ? "1" : "0");
+            FileUtils.writeLine(DC_DIMMING_NODE, (Boolean) newValue ? "0x40000":"0x50000");
         }
         return true;
     }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == android.R.id.home) {
-            getActivity().onBackPressed();
-            return true;
-        }
-        return false;
-    }
-
 }

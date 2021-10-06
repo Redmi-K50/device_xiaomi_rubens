@@ -8,7 +8,6 @@
      <!-- Ambient settings -->
      <string name="ambient_enable">Use ambient display</string>
 
-
      <!-- Dirac settings -->
      <string name="dirac_enable">启用米音</string>
      <string name="dirac_title">米音</string>
