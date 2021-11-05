@@ -17,7 +17,19 @@
 #include "Power.h"
 #include "libpowerhal.h"
 
+#include <android-base/file.h>
 #include <android-base/logging.h>
+
+#include <sys/ioctl.h>
+
+// defines from drivers/input/touchscreen/xiaomi/xiaomi_touch.h
+#define SET_CUR_VALUE 0
+#define Touch_Doubletap_Mode 14
+
+#define TOUCH_DEV_PATH "/dev/xiaomi-touch"
+#define TOUCH_ID 0
+#define TOUCH_MAGIC 0x5400
+#define TOUCH_IOC_SETMODE TOUCH_MAGIC + SET_CUR_VALUE
 
 namespace aidl {
 namespace android {
@@ -56,6 +68,14 @@ ndk::ScopedAStatus Power::setMode(Mode type, bool enabled) {
                 /* Device entering non interactive state,
                    disable all hints to save power. */
                 libpowerhal_UserScnDisableAll();
+            break;
+        }
+        case Mode::DOUBLE_TAP_TO_WAKE:
+        {
+            int fd = open(TOUCH_DEV_PATH, O_RDWR);
+            int arg[3] = {TOUCH_ID, Touch_Doubletap_Mode, enabled ? 1 : 0};
+            ioctl(fd, TOUCH_IOC_SETMODE, &arg);
+            close(fd);
             break;
         }
         default:
