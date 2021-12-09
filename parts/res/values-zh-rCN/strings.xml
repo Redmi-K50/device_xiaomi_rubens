@@ -79,8 +79,13 @@
     <string name="dt2w_enable_title">双击亮屏</string>
     <string name="dt2w_enable_summary">在屏幕关闭的状态下，双击以点亮屏幕</string>
 
-    <!-- DC dimming settings -->
+    <!-- DC Dimming -->
     <string name="dc_dimming_enable_title">DC 调光</string>
     <string name="dc_dimming_enable_summary">减少低亮度下眼睛的疲劳</string>
+
+    <!-- Clear Speaker -->
+    <string name="clear_speaker_title">扬声器清理</string>
+    <string name="clear_speaker_summary">开启后，自动播放30s音频清理扬声器出音孔灰尘</string>
+    <string name="clear_speaker_description">功能说明：\n\n    1.当出现轻微堵孔时，建议执行该功能一到两次;\n\n    2.当出现严重堵孔时，建议执行该功能两到五次，同时完成手握手机向下甩的动作</string>
 
 </resources>
