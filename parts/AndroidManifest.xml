@@ -79,6 +79,17 @@
             </intent-filter>
         </service>
 
+        <service
+            android:name=".display.DcDimmingTileService"
+            android:icon="@drawable/ic_dc_tile"
+            android:label="@string/dc_dimming_enable_title"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action
+                    android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
+
         <activity
             android:name=".doze.DozeSettingsActivity"
             android:label="@string/ambient_display_title"
@@ -110,15 +121,21 @@
                 android:resource="@drawable/ic_thermal_settings" />
         </activity>
 
-        <service
-            android:name=".RefreshRateTileService"
-            android:icon="@drawable/ic_qs_refresh_rate"
-            android:label="@string/refresh_rate_tile_title"
-            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+        <activity
+            android:name=".display.DcDimmingSettingsActivity"
+            android:label="@string/dc_dimming_enable_title"
+            android:theme="@style/Theme.Main">
             <intent-filter>
-                <action android:name="android.service.quicksettings.action.QS_TILE"/>
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
-        </service>
+
+            <meta-data
+                android:name="com.android.settings.category"
+                android:value="com.android.settings.category.ia.display" />
+            <meta-data
+                android:name="com.android.settings.summary"
+                android:resource="@string/dc_dimming_enable_summary" />
+        </activity>
 
     </application>
 </manifest>

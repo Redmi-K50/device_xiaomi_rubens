@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2021 The LineageOS Project
+     Copyright (C) 2022 The LineageOS Project
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources>
@@ -72,11 +72,6 @@
     <!-- Refresh Rate tile -->
     <string name="refresh_rate_tile_title">Refresh Rate</string>
 
-    <!-- DC dimming settings -->
-    <string name="dc_dimming_enable_title">DC Dimming</string>
-    <string name="dc_dimming_enable_summary">DC Dimming reduces eye strain in low light conditions (Note: reduce image quality)</string>
-    <string name="dc_dimming_enable_summary_not_supported">DC Dimming is not currently supported by the kernel</string>
-
     <!-- Thermal Profiles -->
     <string name="thermal_title">Thermal Profiles</string>
     <string name="thermal_summary">Adjust per-app thermal profiles for optimum performance</string>
@@ -87,4 +82,10 @@
     <string name="thermal_dialer">Dialer</string>
     <string name="thermal_gaming">Gaming</string>
     <string name="thermal_streaming">Streaming</string>
+
+    <!-- DC dimming settings -->
+    <string name="dc_dimming_enable_title">DC Dimming</string>
+    <string name="dc_dimming_enable_summary">Reduces eye strain in low light conditions</string>
+    <string name="dc_dimming_enable_summary_not_supported">DC Dimming is currently not supported by the kernel</string>
+
 </resources>

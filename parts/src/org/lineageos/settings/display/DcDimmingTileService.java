@@ -29,7 +29,7 @@ import org.lineageos.settings.utils.FileUtils;
 public class DcDimmingTileService extends TileService {
 
     private static final String DC_DIMMING_ENABLE_KEY = "dc_dimming_enable";
-    private static final String DC_DIMMING_NODE = "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/msm_fb_ea_enable";
+    private static final String DC_DIMMING_NODE = "/sys/class/mi_display/disp-DSI-0/disp_param";
 
     private void updateUI(boolean enabled) {
         final Tile tile = getQsTile();
