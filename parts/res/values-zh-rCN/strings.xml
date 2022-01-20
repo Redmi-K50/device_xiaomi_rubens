@@ -88,4 +88,11 @@
     <string name="clear_speaker_summary">开启后，自动播放30s音频清理扬声器出音孔灰尘</string>
     <string name="clear_speaker_description">功能说明：\n\n    1.当出现轻微堵孔时，建议执行该功能一到两次;\n\n    2.当出现严重堵孔时，建议执行该功能两到五次，同时完成手握手机向下甩的动作</string>
 
+    <!-- Refresh rate  -->
+    <string name="refresh_title">刷新率设置</string>
+    <string name="refresh_summary">设置特定应用的最大刷新率</string>
+    <string name="refresh_default">默认</string>
+    <string name="refresh_standard">60Hz</string>
+    <string name="refresh_extreme">120Hz</string>
+
 </resources>

@@ -25,6 +25,7 @@ import android.util.Log;
 
 import org.lineageos.settings.dirac.DiracUtils;
 import org.lineageos.settings.chec.DozeUtils;
+import org.lineageos.settings.refreshrate.RefreshUtils;
 
 import vendor.xiaomi.hardware.touchfeature.V1_0.ITouchFeature;
 import vendor.xiaomi.hardware.displayfeature.V1_0.IDisplayFeature;
@@ -61,6 +62,6 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         if (DEBUG) Log.d(TAG, "Received boot completed intent");
         DozeUtils.checkDozeService(context);
         DiracUtils.initialize(context);
-
+        RefreshUtils.startService(context);
     }
 }
