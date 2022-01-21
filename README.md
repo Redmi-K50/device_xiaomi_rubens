@@ -7,9 +7,6 @@ It was released in March 2022.
 
 ## Dependencies
 
-### SkSurface
-> https://gerrit.pixelexperience.org/c/frameworks_native/+/15536
-
 ### Telephony
 > https://gerrit.pixelexperience.org/c/frameworks_opt_telephony/+/15476
 
