@@ -126,4 +126,19 @@
         <item>2</item>
         <item>3</item>
     </string-array>
+
+    <string-array name="dirac_scenario_pref_titles">
+        <item>@string/dirac_headset_scenario_intelligent</item>
+        <item>@string/dirac_headset_scenario_music</item>
+        <item>@string/dirac_headset_scenario_video</item>
+        <item>@string/dirac_headset_scenario_vocal</item>
+    </string-array>
+
+    <string-array name="dirac_scenario_pref_values">
+        <item>4</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>6</item>
+    </string-array>
 </resources>

@@ -24,6 +24,14 @@
         android:title="@string/dirac_enable" />
 
     <ListPreference
+        android:key="dirac_scenario_pref"
+        android:entries="@array/dirac_scenario_pref_titles"
+        android:entryValues="@array/dirac_scenario_pref_values"
+        android:defaultValue="4"
+        android:title="@string/dirac_headset_optimization"
+        android:summary="%s" />
+
+    <ListPreference
         android:key="dirac_headset_pref"
         android:entries="@array/dirac_headset_pref_entries"
         android:entryValues="@array/dirac_headset_pref_values"

@@ -54,19 +54,12 @@
      <string name="dirac_preset_country">乡村</string>
      <string name="dirac_preset_dance">舞蹈</string>
      <string name="dirac_preset_metal">金属</string>
-     <string name="dirac_preset_bass_booster">Bass Booster</string>
-     <string name="dirac_preset_live">Live</string>
-     <string name="dirac_preset_balanced">Balanced</string>
-     <string name="dirac_preset_bass_reduction">Bass Reduction</string>
-     <string name="dirac_preset_treble_reduction">Treble Reduction</string>
-     <string name="dirac_preset_soft_bass">Soft Bass</string>
-     <string name="dirac_preset_soft_treble">Soft Treble</string>
 
-     <string name="music_headset_scenario_intelligent">动态</string>
-     <string name="music_headset_scenario_music">音乐</string>
-     <string name="music_headset_scenario_select">场景选择</string>
-     <string name="music_headset_scenario_video">视频</string>
-     <string name="music_headset_scenario_vocal">人声</string>
+     <string name="dirac_headset_optimization">场景选择</string>
+     <string name="dirac_headset_scenario_intelligent">动态</string>
+     <string name="dirac_headset_scenario_video">视频</string>
+     <string name="dirac_headset_scenario_music">音乐</string>
+     <string name="dirac_headset_scenario_vocal">人声</string>
 
      <!-- Refresh Rate tile -->
      <string name="refresh_rate_tile_title">刷新率</string>
