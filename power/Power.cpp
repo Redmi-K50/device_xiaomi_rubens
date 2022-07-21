@@ -88,6 +88,22 @@ ndk::ScopedAStatus Power::isModeSupported(Mode type, bool* _aidl_return) {
     LOG(INFO) << "Power isModeSupported: " << static_cast<int32_t>(type);
     *_aidl_return = true;
 
+    if (type == Mode::DOUBLE_TAP_TO_WAKE) {
+        int fd = -1;
+        fd = open(TOUCH_DEV_PATH, O_RDWR);
+        if (fd == -1) {
+            LOG(WARNING) << "Could not open Xiaomi input device"
+                         << ", reporting DOUBLE_TAP_TO_WAKE"
+                         << " as unsupported.";
+            *_aidl_return = false;
+        }
+        else {
+            // Probably not the best idea to
+            // leave an open file descriptor.
+            close(fd);
+        }
+    }
+
     if (type >= Mode::CAMERA_STREAMING_HIGH) {
         *_aidl_return = false;
     }
