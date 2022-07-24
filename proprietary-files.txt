@@ -194,3 +194,6 @@ lib64/libterservice.so
 
 # YGPS
 -priv-app/YGPS/YGPS.apk
+
+# Power
+-vendor/lib64/libpowerhal.so
