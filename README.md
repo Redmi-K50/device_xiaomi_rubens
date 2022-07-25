@@ -14,9 +14,6 @@ It was released in March 2022.
 > https://gerrit.pixelexperience.org/c/frameworks_opt_net_ims/+/15318
 > https://gerrit.pixelexperience.org/c/frameworks_opt_net_ims/+/15317
 
-### Vibrator
-> https://gerrit.pixelexperience.org/c/frameworks_native/+/19155
-
 ## Credits
 This tree based on work of @wbs306 - all credits belong to him.
 
