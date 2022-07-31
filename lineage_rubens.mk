@@ -32,6 +32,6 @@ TARGET_SCREEN_DENSITY := 560
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="Xiaomi/mihal/mihal:12/SP1A.210812.016/V13.0.17.0.SLOCNXM:user/release-keys"
+    PRIVATE_BUILD_DESC="missi-user 12 SP1A.210812.016 V13.0.17.0.SLNCNXM release-keys"
 
-BUILD_FINGERPRINT := Redmi/rubens/rubens:12/SP1A.210812.016/V13.0.17.0.SLOCNXM:user/release-keys
+BUILD_FINGERPRINT := Redmi/rubens/rubens:12/SP1A.210812.016/V13.0.17.0.SLNCNXM:user/release-keys
