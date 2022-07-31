@@ -1,7 +1,7 @@
 /*
    Copyright (c) 2015, The Linux Foundation. All rights reserved.
    Copyright (C) 2016 The CyanogenMod Project.
-   Copyright (C) 2022 The LineageOS Project.
+   Copyright (C) 2019 The LineageOS Project.
    Redistribution and use in source and binary forms, with or without
    modification, are permitted provided that the following conditions are
    met:
@@ -28,35 +28,41 @@
  */
 
 #include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
-#include <android-base/properties.h>
-
 #define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
 #include <sys/_system_properties.h>
 
-using android::base::GetProperty;
+#include <android-base/properties.h>
+#include "property_service.h"
+#include "vendor_init.h"
+
 using std::string;
 
 void property_override(string prop, string value)
 {
-    auto pi = (prop_info *)__system_property_find(prop.c_str());
+  auto pi = (prop_info *)__system_property_find(prop.c_str());
 
-    if (pi != nullptr)
-        __system_property_update(pi, value.c_str(), value.size());
-    else
-        __system_property_add(prop.c_str(), prop.size(), value.c_str(), value.size());
+  if (pi != nullptr)
+    __system_property_update(pi, value.c_str(), value.size());
+  else
+    __system_property_add(prop.c_str(), prop.size(), value.c_str(), value.size());
 }
 
 void vendor_load_properties()
 {
-    string prop_partitions[] = {"", "vendor.", "odm."};
-    for (const string &prop : prop_partitions)
-    {
-        property_override(string("ro.product.") + prop + string("brand"), "Redmi");
-        property_override(string("ro.product.") + prop + string("name"), "rubens");
-        property_override(string("ro.product.") + prop + string("device"), "rubens");
-        property_override(string("ro.product.") + prop + string("model"), "22041211AC");
-        property_override(string("ro.product.") + prop + string("marketname"), "Redmi K50");
-    }
+  string brand = "Redmi";
+  string name = "rubens";
+  string device = name;
+  string model = "22041211AC";
+  string marketname = "Redmi K50";
+
+  // Override all partitions' props
+  string prop_partitions[] = {"", "vendor.", "odm."};
+  for (const string &prop : prop_partitions)
+  {
+    property_override(string("ro.product.") + prop + string("brand"), brand);
+    property_override(string("ro.product.") + prop + string("name"), name);
+    property_override(string("ro.product.") + prop + string("device"), device);
+    property_override(string("ro.product.") + prop + string("model"), model);
+    property_override(string("ro.product.") + prop + string("marketname"), marketname);
+  }
 }
