@@ -14,14 +14,10 @@
 // limitations under the License.
 //
 cc_library_static {
-    name: "libinit_xaga",
-    srcs: ["init_xaga.cpp"],
+    name: "libinit_rubens",
+    srcs: ["init_rubens.cpp"],
     whole_static_libs: ["libbase"],
-    header_libs: [
-        "libbase_headers",
-    ],
+    header_libs: ["libbase_headers"],
     recovery_available: true,
-    include_dirs: [
-        "system/core/init"
-    ]
+    include_dirs: ["system/core/init"]
 }

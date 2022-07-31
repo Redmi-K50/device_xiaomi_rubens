@@ -19,8 +19,8 @@
 <resources>
 
     <!-- Height of the status bar -->
-    <dimen name="status_bar_height_default">38dp</dimen>
-    <dimen name="status_bar_height_portrait">38dp</dimen>
-    <dimen name="status_bar_height_landscape">30dp</dimen>
+    <dimen name="status_bar_height_default">104.0px</dimen>
+    <dimen name="status_bar_height_portrait">104.0px</dimen>
+    <dimen name="status_bar_height_landscape">104.0px</dimen>
 
 </resources>

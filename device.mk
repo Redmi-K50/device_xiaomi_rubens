@@ -16,7 +16,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 # Enable project quotas and casefolding for emulated storage without sdcardfs
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
-# A/B
+# Virtual A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/compression.mk)
 
 PRODUCT_PACKAGES += \
@@ -147,11 +147,9 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 PRODUCT_PACKAGES += \
     FrameworkResOverlay \
-    XagaProFrameworkResOverlay \
     TetheringOVerlay \
     WifiOverlay \
-    SystemUIOverlay \
-    XagaProInFrameworkResOverlay
+    SystemUIOverlay
 
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
@@ -195,4 +193,4 @@ PRODUCT_PACKAGES += \
     XiaomiParts
 
 # Inherit the proprietary files
-$(call inherit-product, vendor/xiaomi/xaga/xaga-vendor.mk)
+$(call inherit-product, vendor/xiaomi/rubens/rubens-vendor.mk)

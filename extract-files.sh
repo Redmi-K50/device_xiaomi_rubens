@@ -8,7 +8,7 @@
 
 set -e
 
-DEVICE=xaga
+DEVICE=rubens
 VENDOR=xiaomi
 
 # Load extract_utils and do some sanity checks
@@ -32,19 +32,20 @@ SECTION=
 
 while [ "${#}" -gt 0 ]; do
     case "${1}" in
-        -n | --no-cleanup )
-                CLEAN_VENDOR=false
-                ;;
-        -k | --kang )
-                KANG="--kang"
-                ;;
-        -s | --section )
-                SECTION="${2}"; shift
-                CLEAN_VENDOR=false
-                ;;
-        * )
-                SRC="${1}"
-                ;;
+    -n | --no-cleanup)
+        CLEAN_VENDOR=false
+        ;;
+    -k | --kang)
+        KANG="--kang"
+        ;;
+    -s | --section)
+        SECTION="${2}"
+        shift
+        CLEAN_VENDOR=false
+        ;;
+    *)
+        SRC="${1}"
+        ;;
     esac
     shift
 done
@@ -55,9 +56,9 @@ fi
 
 function blob_fixup() {
     case "${1}" in
-        lib64/libsink.so)
-            "${PATCHELF}" --add-needed "libshim_vtservice.so" "${2}"
-            ;;
+    lib64/libsink.so)
+        "${PATCHELF}" --add-needed "libshim_vtservice.so" "${2}"
+        ;;
     esac
 }
 
