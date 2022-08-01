@@ -1,9 +1,4 @@
-# Unpinned blobs from rubens-user 12 SP1A.210812.016 V13.0.22.0.SLOCNXM release-keys
-
-# APNs
-etc/apns-conf.xml
-etc/fiveG-apns-conf.xml
-etc/xcap-apns-conf.xml
+# Unpinned blobs from rubens-user 12 SP1A.210812.016 V13.0.22.0.SLNCNXM release-keys
 
 # APU Wares
 system_ext/lib/libapuwareapusys.mtk.so
