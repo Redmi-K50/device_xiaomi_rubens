@@ -21,3 +21,14 @@ It was released in March 2022.
 ![Redmi K50](https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1653381863.47942179.png)
 
 This tree based on work of @wbs306 - all credits belong to him.
+
+## Dependencies
+### Vibrator
+> https://github.com/phhusson/platform_frameworks_native/commit/59d3ecc59bf95963dfd88f842de66d9f477f2fa2
+### SkSurface
+> https://github.com/PixelExperience/frameworks_native/commit/bdc6b69c97a2c07c64b3ebae7d410e886924fd6e
+### Telephony
+> https://github.com/PixelExperience/frameworks_opt_telephony/commit/538afb21007e0497bde131b1ef327fb93ee37031
+### Ims
+> https://github.com/PixelExperience/frameworks_opt_net_ims/commit/ddacb4ba5ec943a410bb74ea31ea7b32003ce708
+> https://github.com/PixelExperience/frameworks_opt_net_ims/commit/9de68f4da30fc61d95bdbdfbd400f8080ea00cec
