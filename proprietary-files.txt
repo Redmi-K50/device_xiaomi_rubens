@@ -1,5 +1,15 @@
 # Unpinned blobs from rubens-user 12 SP1A.210812.016 V13.0.22.0.SLNCNXM release-keys
 
+# AGPS
+-app/LocationEM2/LocationEM2.apk
+-priv-app/LPPeService/LPPeService.apk
+
+# APNS
+etc/apns-conf.xml
+etc/fiveG-apns-conf.xml
+etc/spn-conf.xml
+etc/xcap-apns-conf.xml
+
 # APU Wares
 system_ext/lib/libapuwareapusys.mtk.so
 system_ext/lib/libapuwareapusys_v2.mtk.so
@@ -89,7 +99,6 @@ etc/init/duraspeed.rc
 framework/duraspeed.jar
 
 # EngineerMode
--priv-app/YGPS/YGPS.apk
 -priv-app/EngineerMode/EngineerMode.apk
 lib/libem_aoltest_jni.so
 lib/libem_audio_jni.so
@@ -164,13 +173,10 @@ system_ext/lib64/vendor.mediatek.hardware.videotelephony@1.0.so
 system_ext/lib/vendor.mediatek.hardware.mtkradioex@3.0.so
 system_ext/lib64/vendor.mediatek.hardware.mtkradioex@3.0.so
 
-# SPN
-etc/apns-conf.xml
-etc/fiveG-apns-conf.xml
-etc/spn-conf.xml
-etc/xcap-apns-conf.xml
-
 # TER Service
 bin/terservice
 etc/init/terserver.rc
 lib64/libterservice.so
+
+# YGPS
+-priv-app/YGPS/YGPS.apk
