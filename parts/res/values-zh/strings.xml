@@ -6,7 +6,7 @@
 <resources>
 
      <!-- Ambient settings -->
-     <string name="ambient_enable">Use ambient display</string>
+     <string name="ambient_enable">启用环境显示</string>
 
      <!-- Dirac settings -->
      <string name="dirac_enable">启用米音</string>
@@ -63,19 +63,4 @@
      <!-- Refresh Rate tile -->
      <string name="refresh_rate_tile_title">刷新率</string>
 
-     <!-- Thermal Profiles -->
-     <string name="thermal_title">温控面板</string>
-     <string name="thermal_summary">调整各个应用所使用的温控配置以获得更好的性能表现</string>
-     <string name="thermal_default">默认</string>
-     <string name="thermal_benchmark">跑分</string>
-     <string name="thermal_browser">浏览器</string>
-     <string name="thermal_camera">相机</string>
-     <string name="thermal_dialer">拨号</string>
-     <string name="thermal_gaming">游戏</string>
-     <string name="thermal_streaming">流媒体</string>
-
-     <!-- DC dimming settings -->
-     <string name="dc_dimming_enable_title">DC 调光</string>
-     <string name="dc_dimming_enable_summary">减少低亮度下眼睛的疲劳</string>
-     <string name="dc_dimming_enable_summary_not_supported">当前内核目前不支持 DC 调光。</string>
 </resources>
