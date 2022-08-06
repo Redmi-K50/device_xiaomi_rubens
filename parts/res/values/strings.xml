@@ -4,7 +4,7 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources>
-    
+
     <!-- Ambient settings -->
     <string name="ambient_enable">Enable ambient display</string>
 
@@ -18,7 +18,7 @@
 
     <string name="dirac_hifi_title">Hi-Fi</string>
     <string name="dirac_hifi_summary">Decrease noise and Distortion and increase audio quality</string>
-    
+
     <string name="dirac_headset_default">Default</string>
     <string name="dirac_headset_earbuds">Mi Earbuds</string>
     <string name="dirac_headset_in_ear_2013">Mi In-Ear (2013)</string>
@@ -41,7 +41,7 @@
     <string name="dirac_headset_in_ear2">Mi In-Ear 2</string>
     <string name="dirac_headset_earphone_basic">Mi Earphones Basic</string>
     <string name="dirac_headset_earphone">Mi Earphones</string>
-    
+
     <string name="dirac_preset_default">Default</string>
     <string name="dirac_preset_rock">Rock</string>
     <string name="dirac_preset_jazz">Jazz</string>
@@ -54,11 +54,11 @@
     <string name="dirac_preset_dance">Dance</string>
     <string name="dirac_preset_metal">Metal</string>
 
-    <string name="music_headset_scenario_intelligent">Smart</string>
-    <string name="music_headset_scenario_music">Music</string>
-    <string name="music_headset_scenario_select">Select Scene</string>
-    <string name="music_headset_scenario_video">Video</string>
-    <string name="music_headset_scenario_vocal">Voice</string>
+    <string name="dirac_headset_optimization">Sound optimization</string>
+    <string name="dirac_headset_scenario_intelligent">Smart</string>
+    <string name="dirac_headset_scenario_music">Music</string>
+    <string name="dirac_headset_scenario_video">Video</string>
+    <string name="dirac_headset_scenario_vocal">Voice</string>
 
     <!-- Refresh Rate tile -->
     <string name="refresh_rate_tile_title">Refresh Rate</string>
