@@ -1,0 +1,2 @@
+type sensors_prop, property_type;
+get_prop(hal_citsensorservice_xiaomi_default, sensors_prop)
