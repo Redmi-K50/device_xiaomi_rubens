@@ -1,1 +1,11 @@
-allow vendor_init persist_file:lnk_file read;
+allow vendor_init persist_file:lnk_file { read };
+allow vendor_init build_prop:property_service { set };
+allow vendor_init default_prop:file { read };
+allow vendor_init default_prop:property_service { set };
+allow vendor_init fingerprint_prop:property_service { set };
+allow vendor_init init_service_status_private_prop:file { read };
+allow vendor_init proc:file { write };
+allow vendor_init system_prop:file { read };
+allow vendor_init init_service_status_private_prop:file { read };
+allow vendor_init proc:file { write };
+allow vendor_init system_prop:file { read };
