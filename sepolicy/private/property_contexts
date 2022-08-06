@@ -1,3 +1,0 @@
-ro.telephony.default_network u:object_r:radio_prop:s0
-ro.miui. u:object_r:exported_system_prop:s0
-persist.sensor. u:object_r:sensors_prop:s0

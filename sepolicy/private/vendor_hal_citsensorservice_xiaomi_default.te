@@ -1,0 +1,3 @@
+allow vendor_hal_citsensorservice_xiaomi_default input_device:dir { read };
+allow vendor_hal_citsensorservice_xiaomi_default property_socket:sock_file { write };
+allow vendor_hal_citsensorservice_xiaomi_default vendor_sysfs_displayfeature:dir { search };

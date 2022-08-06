@@ -1,5 +1,1 @@
-allow init vendor_overlay_file:dir mounton;
-allow init vendor_file:file mounton;
-allow init vendor_configs_file:file mounton;
-allow init vendor_configs_file:dir mounton;
-allow init sysfs_graphics:file w_file_perms;
+allow init socket_device:sock_file { create };

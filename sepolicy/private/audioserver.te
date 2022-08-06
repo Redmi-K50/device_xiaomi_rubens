@@ -1,0 +1,4 @@
+allow audioserver vendor_default_prop:file { read };
+allow audioserver vendor_default_prop:file { open };
+allow audioserver vendor_default_prop:file { map };
+allow audioserver vendor_default_prop:file { getattr };

@@ -1,0 +1,4 @@
+allow netutils_wrapper ccci_device:chr_file { read write };
+allow netutils_wrapper ccci_vts_device:chr_file { read write };
+allow netutils_wrapper ccci_wifi_proxy_device:chr_file { read write };
+allow netutils_wrapper gsm0710muxd_device:chr_file { read write };

@@ -1,0 +1,1 @@
+allow hal_health_default sysfs_power_supply:dir { search };

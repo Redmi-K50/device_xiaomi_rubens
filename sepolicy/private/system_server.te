@@ -1,1 +1,1 @@
-allow system_server sysfs_kgsl:file r_file_perms;
+allow system_server sysfs:file { read };

@@ -1,0 +1,3 @@
+allow mtk_hal_nvramagent proc_bootconfig:file { read };
+allow mtk_hal_nvramagent proc_cmdline:file { read };
+allow mtk_hal_nvramagent sysfs_dt_firmware_android:dir { search };

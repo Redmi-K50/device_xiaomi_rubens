@@ -1,3 +1,0 @@
-type hal_citsensorservice_xiaomi_default, domain;
-wakelock_use(hal_citsensorservice_xiaomi_default)
-get_prop(hal_citsensorservice_xiaomi_default, sensors_prop)
