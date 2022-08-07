@@ -4,28 +4,13 @@ type bt_firmware_file, file_type;
 type firmware_file, file_type;
 type persist_file, file_type;
 
-type ccci_mdinit, domain;
-type ccci_mdinit_exec, exec_type, file_type;
-
-type sysfs_power_supply, sysfs_type, fs_type;
-
-type mtk_hal_camera, domain;
-type mtk_hal_camera_exec, exec_type, file_type;
+type vendor_sysfs_graphics, sysfs_type, fs_type;
+type sysfs_graphics, sysfs_type, fs_type;
+type sysfs_kgsl, sysfs_type, fs_type;
 
 type mtk_hal_light, domain;
 type mtk_hal_light_exec, exec_type, file_type;
 
-type mtk_hal_nvramagent, domain;
-
-type system_server, domain, domain_deprecated, mlstrustedsubject;
-
-type system_suspend, domain, coredomain, system_suspend_server;
-
 type vendor_hal_citsensorservice_xiaomi_default, domain;
-
-type vendor_init, domain, mlstrustedsubject;
-type vendor_init_exec, exec_type, vendor_file_type, file_type;
-
-type netutils_wrapper_exec_bin, system_file_type, exec_type, file_type;
 
 type xiaomi_settings, domain;

@@ -1,2 +1,0 @@
-allow rild default_prop:file { read };
-allow rild vendor_default_prop:property_service { set };

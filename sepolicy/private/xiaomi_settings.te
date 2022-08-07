@@ -1,3 +1,6 @@
+
+type xiaomi_settings, domain;
+
 binder_call(xiaomi_settings, hal_displayfeature_xiaomi_default)
 binder_call(xiaomi_settings, gpuservice)
 app_domain(xiaomi_settings)
