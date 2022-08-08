@@ -1,5 +1,4 @@
-
-type xiaomi_settings, domain;
+type hal_displayfeature_xiaomi_hwservice, dev_type;
 
 binder_call(xiaomi_settings, hal_displayfeature_xiaomi_default)
 binder_call(xiaomi_settings, gpuservice)

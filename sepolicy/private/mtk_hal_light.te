@@ -1,3 +1,6 @@
+type mtk_hal_light, domain;
+type mtk_hal_light_exec, exec_type, file_type;
+
 init_daemon_domain(mtk_hal_light)
 
 hwbinder_use(mtk_hal_light)
