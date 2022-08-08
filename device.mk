@@ -160,6 +160,7 @@ PRODUCT_PACKAGES += \
     TetheringOVerlay \
     WifiOverlay \
     SystemUIOverlay \
+    SettingsOverlay \
     NotchBarKiller
 
 # Partitions
