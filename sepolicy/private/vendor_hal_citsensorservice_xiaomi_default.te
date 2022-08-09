@@ -1,7 +1,0 @@
-type vendor_sysfs_displayfeature, dev_type;
-
-wakelock_use(vendor_hal_citsensorservice_xiaomi_default)
-
-allow vendor_hal_citsensorservice_xiaomi_default input_device:dir { read };
-allow vendor_hal_citsensorservice_xiaomi_default property_socket:sock_file { write };
-allow vendor_hal_citsensorservice_xiaomi_default vendor_sysfs_displayfeature:dir { search };
