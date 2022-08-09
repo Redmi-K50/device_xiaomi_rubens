@@ -93,6 +93,31 @@ public final class FileUtils {
         return true;
     }
 
+    public static boolean rewriteFile(String fileName, String content) {
+        FileWriter writer = null;
+
+        try {
+            writer = new FileWriter(fileName);
+            writer.write(content);
+        } catch (FileNotFoundException e) {
+            Log.w(TAG, "No such file " + fileName + " for writing", e);
+            return false;
+        } catch (IOException e) {
+            Log.e(TAG, "Could not write to file " + fileName, e);
+            return false;
+        } finally {
+            try {
+                if (writer != null) {
+                    writer.close();
+                }
+            } catch (IOException e) {
+                // Ignored, not much we can do anyway
+            }
+        }
+
+        return true;
+    }
+
     /**
      * Checks whether the given file exists
      *
