@@ -49,8 +49,7 @@ public class DcDimmingSettingsFragment extends PreferenceFragment implements
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (DC_DIMMING_ENABLE_KEY.equals(preference.getKey())) {
-            FileUtils.readOneLine
-            FileUtils.rewriteFile(DC_DIMMING_NODE, (Boolean) newValue ? "feature name[feature id]: feature value\n" +
+            String t = "feature name[feature id]: feature value\n" +
                         "                             dimming[00]: 0\n" +
                         "                                 hbm[01]: 0\n" +
                         "                             hbm_fod[02]: 0\n" +
@@ -71,7 +70,8 @@ public class DcDimmingSettingsFragment extends PreferenceFragment implements
                         "                                 gir[17]: 0\n" +
                         "                             Unknown[18]: 0\n" +
                         "                             Unknown[19]: 0\n" +
-                        "                             Unknown[20]: 0" : "feature name[feature id]: feature value\n" +
+                        "                             Unknown[20]: 0";
+            String f = "feature name[feature id]: feature value\n" +
                         "                             dimming[00]: 0\n" +
                         "                                 hbm[01]: 0\n" +
                         "                             hbm_fod[02]: 0\n" +
@@ -92,7 +92,8 @@ public class DcDimmingSettingsFragment extends PreferenceFragment implements
                         "                                 gir[17]: 0\n" +
                         "                             Unknown[18]: 0\n" +
                         "                             Unknown[19]: 0\n" +
-                        "                             Unknown[20]: 0");
+                        "                             Unknown[20]: 0";
+            FileUtils.rewriteFile(DC_DIMMING_NODE, (Boolean) newValue ? t : f);
         }
         return true;
     }

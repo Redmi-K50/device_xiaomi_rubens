@@ -54,7 +54,7 @@ public class DcDimmingTileService extends TileService {
         super.onClick();
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
         final boolean enabled = !(sharedPrefs.getBoolean(DC_DIMMING_ENABLE_KEY, false));
-        FileUtils.rewriteFile(DC_DIMMING_NODE, enabled ? "feature name[feature id]: feature value\n" +
+        String t = "feature name[feature id]: feature value\n" +
                         "                             dimming[00]: 0\n" +
                         "                                 hbm[01]: 0\n" +
                         "                             hbm_fod[02]: 0\n" +
@@ -75,7 +75,8 @@ public class DcDimmingTileService extends TileService {
                         "                                 gir[17]: 0\n" +
                         "                             Unknown[18]: 0\n" +
                         "                             Unknown[19]: 0\n" +
-                        "                             Unknown[20]: 0" : "feature name[feature id]: feature value\n" +
+                        "                             Unknown[20]: 0";
+        String f = "feature name[feature id]: feature value\n" +
                         "                             dimming[00]: 0\n" +
                         "                                 hbm[01]: 0\n" +
                         "                             hbm_fod[02]: 0\n" +
@@ -96,7 +97,8 @@ public class DcDimmingTileService extends TileService {
                         "                                 gir[17]: 0\n" +
                         "                             Unknown[18]: 0\n" +
                         "                             Unknown[19]: 0\n" +
-                        "                             Unknown[20]: 0");
+                        "                             Unknown[20]: 0";
+        FileUtils.rewriteFile(DC_DIMMING_NODE, enabled ? t : f);
         sharedPrefs.edit().putBoolean(DC_DIMMING_ENABLE_KEY, enabled).commit();
         updateUI(enabled);
     }
