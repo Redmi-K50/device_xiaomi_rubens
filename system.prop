@@ -13,6 +13,7 @@ Build.BRAND=MTK
 # Camera
 persist.vendor.camera.privapp.list=org.codeaurora.snapcam,com.android.camera,com.google.camera
 vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.google.camera
+camera.lab.options=true
 
 # IPO
 sys.ipo.disable=1
