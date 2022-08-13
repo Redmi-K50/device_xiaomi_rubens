@@ -67,7 +67,7 @@
         <version>1-2</version>
         <interface>
             <name>IVibrator</name>
-            <instance>default</instance>
+            <instance>vibratorfeature</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">
