@@ -43,6 +43,50 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         DozeUtils.checkDozeService(context);
 
         boolean dcDimmingEnabled = sharedPrefs.getBoolean(DC_DIMMING_ENABLE_KEY, false);
-        FileUtils.writeLine(DC_DIMMING_NODE, dcDimmingEnabled ? "1" : "0");
+        String t = "feature name[feature id]: feature value\n" +
+                        "                             dimming[00]: 0\n" +
+                        "                                 hbm[01]: 0\n" +
+                        "                             hbm_fod[02]: 0\n" +
+                        "                     doze_brightness[03]: 0\n" +
+                        "          fod_calibration_brightness[04]: 0\n" +
+                        "                 fod_calibration_hbm[05]: 0\n" +
+                        "                           flat_mode[06]: 0\n" +
+                        "                                 crc[07]: 0\n" +
+                        "                             dc_mode[08]: 1\n" +
+                        "                           local_hbm[09]: 0\n" +
+                        "                          sensor_lux[10]: 0\n" +
+                        "                  low_brightness_fod[11]: 0\n" +
+                        "                           fp_status[12]: 0\n" +
+                        "                    nature_flat_mode[13]: 0\n" +
+                        "                          spr_render[14]: 0\n" +
+                        "                         brightnress[15]: 0\n" +
+                        "                             lcd_hbm[16]: 0\n" +
+                        "                                 gir[17]: 0\n" +
+                        "                             Unknown[18]: 0\n" +
+                        "                             Unknown[19]: 0\n" +
+                        "                             Unknown[20]: 0";
+        String f = "feature name[feature id]: feature value\n" +
+                        "                             dimming[00]: 0\n" +
+                        "                                 hbm[01]: 0\n" +
+                        "                             hbm_fod[02]: 0\n" +
+                        "                     doze_brightness[03]: 0\n" +
+                        "          fod_calibration_brightness[04]: 0\n" +
+                        "                 fod_calibration_hbm[05]: 0\n" +
+                        "                           flat_mode[06]: 0\n" +
+                        "                                 crc[07]: 0\n" +
+                        "                             dc_mode[08]: 0\n" +
+                        "                           local_hbm[09]: 0\n" +
+                        "                          sensor_lux[10]: 0\n" +
+                        "                  low_brightness_fod[11]: 0\n" +
+                        "                           fp_status[12]: 0\n" +
+                        "                    nature_flat_mode[13]: 0\n" +
+                        "                          spr_render[14]: 0\n" +
+                        "                         brightnress[15]: 0\n" +
+                        "                             lcd_hbm[16]: 0\n" +
+                        "                                 gir[17]: 0\n" +
+                        "                             Unknown[18]: 0\n" +
+                        "                             Unknown[19]: 0\n" +
+                        "                             Unknown[20]: 0";
+        FileUtils.rewriteFile(DC_DIMMING_NODE, dcDimmingEnabled ? t : f);
     }
 }
