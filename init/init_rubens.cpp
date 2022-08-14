@@ -46,23 +46,44 @@ void property_override(string prop, string value)
   else
     __system_property_add(prop.c_str(), prop.size(), value.c_str(), value.size());
 }
+void load_dalvik_properties()
+{
+  // 8GB & 12GB RAM
+  property_override("dalvik.vm.heapstartsize", "32m");
+  property_override("dalvik.vm.heapgrowthlimit", "512m");
+  property_override("dalvik.vm.heapsize", "768m");
+  property_override("dalvik.vm.heapmaxfree", "64m");
+  property_override("dalvik.vm.heaptargetutilization", "0.5");
+  property_override("dalvik.vm.heapminfree", "8m");
+}
+
+void load_miuicamera_properties()
+{
+  // Miui Camera
+  property_override("ro.miui.notch", "1");
+  property_override("camera.lab.options", "true");
+  property_override("ro.product.mod_device", "rubens");
+  property_override("vendor.camera.aux.packagelist", "com.android.camera");
+  property_override("persist.vendor.camera.privapp.list", "com.android.camera");
+  property_override("ro.com.google.lens.oem_camera_package", "com.android.camera");
+}
 
 void vendor_load_properties()
 {
-  string brand = "Redmi";
-  string name = "rubens";
-  string device = name;
-  string model = "22041211AC";
-  string marketname = "Redmi K50";
+
+  load_dalvik_properties();
+  load_miuicamera_properties();
 
   // Override all partitions' props
   string prop_partitions[] = {"", "vendor.", "odm."};
   for (const string &prop : prop_partitions)
   {
-    property_override(string("ro.product.") + prop + string("brand"), brand);
-    property_override(string("ro.product.") + prop + string("name"), name);
-    property_override(string("ro.product.") + prop + string("device"), device);
-    property_override(string("ro.product.") + prop + string("model"), model);
-    property_override(string("ro.product.") + prop + string("marketname"), marketname);
+    property_override(string("ro.product.") + prop + string("brand"), "Redmi");
+    property_override(string("ro.product.") + prop + string("name"), "rubens");
+    property_override(string("ro.product.") + prop + string("device"), "rubens");
+    property_override(string("ro.product.") + prop + string("model"), "22041211AC");
+    property_override(string("ro.product.") + prop + string("marketname"), "Redmi K50");
   }
+
+  property_override("ro.oem_unlock_supported", "0");
 }
