@@ -193,8 +193,8 @@ etc/init/terserver.rc
 lib64/libterservice.so
 
 # Vibrator
-system/lib/libvibratorservice.so|994b508f8eb893d25314932eab83e9235bafca5e
-system/lib64/libvibratorservice.so|97b96add9c77a1dcba13dcad23031906197b7c82
+lib/libvibratorservice.so|994b508f8eb893d25314932eab83e9235bafca5e
+lib64/libvibratorservice.so|97b96add9c77a1dcba13dcad23031906197b7c82
 
 # YGPS
 -priv-app/YGPS/YGPS.apk
