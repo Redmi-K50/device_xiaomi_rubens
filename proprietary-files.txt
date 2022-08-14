@@ -196,20 +196,8 @@ etc/init/terserver.rc
 lib64/libterservice.so
 
 # Vibrator
-lib64/android.hardware.vibrator@1.0.so
-lib64/android.hardware.vibrator@1.1.so
-lib64/android.hardware.vibrator@1.2.so
-lib64/android.hardware.vibrator@1.3.so
-lib64/android.hardware.vibrator-V2-cpp.so
-lib64/libvibratorservice.so
-lib64/libvibrator.so
-lib/android.hardware.vibrator@1.0.so
-lib/android.hardware.vibrator@1.1.so
-lib/android.hardware.vibrator@1.2.so
-lib/android.hardware.vibrator@1.3.so
-lib/android.hardware.vibrator-V2-cpp.so
-lib/libvibratorservice.so
-lib/libvibrator.so
+system/lib/libvibratorservice.so|994b508f8eb893d25314932eab83e9235bafca5e
+system/lib64/libvibratorservice.so|97b96add9c77a1dcba13dcad23031906197b7c82
 
 # YGPS
 -priv-app/YGPS/YGPS.apk
