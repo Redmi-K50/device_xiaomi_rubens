@@ -75,13 +75,8 @@
     <!-- Refresh Rate tile -->
     <string name="refresh_rate_tile_title">刷新率</string>
 
-    <!-- DC dimming settings -->
-    <string name="dc_dimming_enable_title">DC 调光</string>
-    <string name="dc_dimming_enable_summary">减少低亮度下眼睛的疲劳</string>
-    <string name="dc_dimming_enable_summary_not_supported">当前内核目前不支持 DC 调光</string>
-
     <!-- DT2W -->
     <string name="dt2w_enable_title">双击亮屏</string>
     <string name="dt2w_enable_summary">在屏幕关闭的状态下，双击以点亮屏幕</string>
-    
+
 </resources>
