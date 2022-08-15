@@ -62,7 +62,7 @@ void load_miuicamera_properties()
   // Miui Camera
   property_override("ro.miui.notch", "1");
   property_override("camera.lab.options", "true");
-  property_override("ro.product.mod_device", "rubens");
+  property_override("ro.product.mod_device", "rubens_global");
   property_override("vendor.camera.aux.packagelist", "com.android.camera");
   property_override("persist.vendor.camera.privapp.list", "com.android.camera");
   property_override("ro.com.google.lens.oem_camera_package", "com.android.camera");
