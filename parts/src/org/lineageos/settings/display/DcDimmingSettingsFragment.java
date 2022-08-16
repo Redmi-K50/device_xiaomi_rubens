@@ -28,47 +28,48 @@ import android.provider.Settings;
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
 import com.android.settingslib.collapsingtoolbar.R;
 
-import vendor.xiaomi.hardware.touchfeature.V1_0.ITouchFeature;
+import vendor.xiaomi.hardware.displayfeature.V1_0.IDisplayFeature;
 
-public class DoubleTapSettingsFragment extends PreferenceFragment implements
+public class DcDimmingSettingsFragment extends PreferenceFragment implements
         OnPreferenceChangeListener {
 
-    private static final String D2TW_ENABLE_KEY = "dt2w_enable";
-    public static final String SHAREDD2TW = "sharadeD2TW";
+    private static final String DCDIMMING_ENABLE_KEY = "dcdimming_enable";
+    public static final String SHAREDDCDIMMING = "sharadeDCDimming";
 
-    private SwitchPreference mD2TWPreference;
-    private ITouchFeature mTouchFeature;
+    private SwitchPreference mDCDimmingPreference;
+    private IDisplayFeature mDisplayFeature;
+
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-      addPreferencesFromResource(R.xml.dt2w_settings);
+      addPreferencesFromResource(R.xml.dcdimming_settings);
         getActivity().getActionBar().setDisplayHomeAsUpEnabled(true);
        try {
-            mTouchFeature = ITouchFeature.getService();
+            mDisplayFeature = IDisplayFeature.getService();
         } catch (Exception e) {
             // Do nothing
         }
-        mD2TWPreference = (SwitchPreference) findPreference(D2TW_ENABLE_KEY);
-        mD2TWPreference.setEnabled(true);
-        mD2TWPreference.setOnPreferenceChangeListener(this);
-        enableD2TW(1);
+        mDCDimmingPreference = (SwitchPreference) findPreference(DCDIMMING_ENABLE_KEY);
+        mDCDimmingPreference.setEnabled(true);
+        mDCDimmingPreference.setOnPreferenceChangeListener(this);
+        enableDCDimming(1);
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (D2TW_ENABLE_KEY.equals(preference.getKey())) {
-            enableD2TW((Boolean) newValue ? 1 : 0);
+        if (DCDIMMING_ENABLE_KEY.equals(preference.getKey())) {
+            enableDCDimming((Boolean) newValue ? 1 : 0);
         }
         return true;
     }
 
-    private void enableD2TW(int enable) {
-        if (mTouchFeature == null) return;
+    private void enableDCDimming(int enable) {
+        if (mDisplayFeature == null) return;
         try {
-            mTouchFeature.setTouchMode(14,enable);
-            SharedPreferences preferences = getActivity().getSharedPreferences(SHAREDD2TW,Context.MODE_PRIVATE);
+            mDisplayFeature.setFeature(0,20,enable,255);
+            SharedPreferences preferences = getActivity().getSharedPreferences(SHAREDDCDIMMING,Context.MODE_PRIVATE);
             SharedPreferences.Editor editor = preferences.edit();
-             editor.putInt(SHAREDD2TW, enable);
+             editor.putInt(SHAREDDCDIMMING, enable);
               editor.commit();
             }catch (Exception e) {
             // Do nothing
