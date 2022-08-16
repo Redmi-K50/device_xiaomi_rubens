@@ -18,16 +18,19 @@
 package org.lineageos.settings.display;
 
 import android.os.Bundle;
-import android.preference.PreferenceActivity;
 
-public class DoubleTapSettingsActivity extends PreferenceActivity {
+import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
+import com.android.settingslib.collapsingtoolbar.R;
+
+public class DoubleTapSettingsActivity extends CollapsingToolbarBaseActivity {
 
     private static final String TAG_DT2W = "doubletap";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getFragmentManager().beginTransaction().replace(android.R.id.content,
+
+        getFragmentManager().beginTransaction().replace(R.id.content_frame,
                 new DoubleTapSettingsFragment(), TAG_DT2W).commit();
     }
 }

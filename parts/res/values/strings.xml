@@ -76,7 +76,7 @@
     <string name="refresh_rate_tile_title">Refresh Rate</string>
 
     <!-- DT2W -->
-    <string name="dt2w_enable_title">Double-tap to wak</string>
+    <string name="dt2w_enable_title">Double-tap to wake</string>
     <string name="dt2w_enable_summary">Double-tap on lockscreen to wake device</string>
 
 </resources>

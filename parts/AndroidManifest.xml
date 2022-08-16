@@ -28,7 +28,7 @@
 
     <uses-sdk
         android:minSdkVersion="24"
-        android:targetSdkVersion="30"/>
+        android:targetSdkVersion="31"/>
 
     <application
         android:label="@string/device_settings_app_name"
@@ -44,6 +44,7 @@
         <activity
             android:name=".dirac.DiracActivity"
             android:label="@string/dirac_title"
+            android:exported="true"
             android:theme="@style/Theme.SubSettingsBase">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
@@ -77,6 +78,7 @@
         <activity
             android:name=".gpu.GPUActivity"
             android:label="@string/gpu_title"
+            android:exported="true"
             android:theme="@style/Theme.SubSettingsBase">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
@@ -104,7 +106,8 @@
         <activity
             android:name=".display.DoubleTapSettingsActivity"
             android:label="@string/dt2w_enable_title"
-            android:theme="@style/Theme.Main">
+            android:exported="true"
+            android:theme="@style/Theme.SubSettingsBase">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>

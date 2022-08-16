@@ -32,4 +32,4 @@ It was released in March 2022.
 > https://gerrit.pixelexperience.org/c/frameworks_opt_net_ims/+/15317
 
 ## Credits
-This tree based on Redmi Note 11 Pro+(xaga) of @wbs306
+This tree based on Redmi Note 11T Pro+(xaga) of @wbs306

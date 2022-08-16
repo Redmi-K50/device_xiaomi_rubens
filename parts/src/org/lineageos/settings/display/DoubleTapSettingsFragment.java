@@ -17,7 +17,6 @@
 package org.lineageos.settings.display;
 
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.content.Context;
 import androidx.preference.Preference;
 import android.content.SharedPreferences;
@@ -26,7 +25,8 @@ import androidx.preference.PreferenceFragment;
 import androidx.preference.SwitchPreference;
 import android.provider.Settings;
 
-import org.lineageos.settings.R;
+import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
+import com.android.settingslib.collapsingtoolbar.R;
 
 import vendor.xiaomi.hardware.touchfeature.V1_0.ITouchFeature;
 
@@ -60,15 +60,6 @@ public class DoubleTapSettingsFragment extends PreferenceFragment implements
             enableD2TW((Boolean) newValue ? 1 : 0);
         }
         return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == android.R.id.home) {
-            getActivity().onBackPressed();
-            return true;
-        }
-        return false;
     }
 
     private void enableD2TW(int enable) {
