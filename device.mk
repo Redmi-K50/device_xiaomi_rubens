@@ -61,10 +61,6 @@ PRODUCT_PACKAGES += \
     android.hardware.soundtrigger@2.1 \
     android.hardware.soundtrigger@2.2
 
-PRODUCT_PRODUCT_PROPERTIES += \
-    persist.bluetooth.a2dp_offload.disabled=true \
-    persist.bluetooth.bluetooth_audio_hal.disabled=true
-
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilts/audio.bluetooth.default.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/hw/audio.bluetooth.default.so
 
