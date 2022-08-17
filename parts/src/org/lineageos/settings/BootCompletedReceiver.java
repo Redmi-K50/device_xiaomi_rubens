@@ -50,7 +50,7 @@ public class BootCompletedReceiver extends BroadcastReceiver {
 
             //dt2w
             mTouchFeature = ITouchFeature.getService();
-            mTouchFeature.setTouchMode(14,prefsDT2W.getInt(SHAREDD2TW, 1));
+            mTouchFeature.setModeValue(14,prefsDT2W.getInt(SHAREDD2TW, 1));
             
             //dcdimming
             mDisplayFeature = IDisplayFeature.getService();
