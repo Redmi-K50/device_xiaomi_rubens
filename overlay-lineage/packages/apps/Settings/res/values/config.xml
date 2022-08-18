@@ -15,6 +15,4 @@
     <!-- Whether to show min refresh rate in display settings -->
     <bool name="config_show_min_refresh_rate_switch">true</bool>
 
-    <!-- Whether to show Smooth Display feature in Settings Options -->
-    <bool name="config_show_smooth_display">false</bool>
 </resources>
