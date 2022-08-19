@@ -140,6 +140,9 @@ TARGET_BOARD_PLATFORM := mt6895
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
 
+ # Properties
+TARGET_SYSTEM_EXT_PROP += $(DEVICE_PATH)/configs/props/system_ext.prop
+
 # Recovery
 TARGET_NO_RECOVERY := true
 BOARD_HAS_LARGE_FILESYSTEM := true
