@@ -69,8 +69,8 @@ public class DcDimmingSettingsFragment extends PreferenceFragment implements
             mDisplayFeature.setFeature(0,20,enable,255);
             SharedPreferences preferences = getActivity().getSharedPreferences(SHAREDDCDIMMING,Context.MODE_PRIVATE);
             SharedPreferences.Editor editor = preferences.edit();
-             editor.putInt(SHAREDDCDIMMING, enable);
-              editor.commit();
+            editor.putInt(SHAREDDCDIMMING, enable);
+            editor.commit();
             }catch (Exception e) {
             // Do nothing
         }

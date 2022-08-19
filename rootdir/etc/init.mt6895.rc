@@ -4,10 +4,6 @@ on early-init
 on post-fs
     mount none /system/bin/hw/android.hardware.lights-service.mediatek /vendor/bin/hw/android.hardware.lights-service.mediatek bind
 
-on boot
-    chown system system /sys/class/mi_display/disp-DSI-0/disp_param
-    chmod 0664 /sys/class/mi_display/disp-DSI-0/disp_param
-
 on property:persist.sys.parts.gpu.governor=*
     write /sys/devices/platform/13000000.mali/devfreq/13000000.mali/governor ${persist.sys.parts.gpu.governor}
 

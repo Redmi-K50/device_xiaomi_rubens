@@ -24,7 +24,7 @@ import android.content.SharedPreferences;
 import android.util.Log;
 
 import org.lineageos.settings.dirac.DiracUtils;
-import org.lineageos.settings.chec.DozeUtils;
+import org.lineageos.settings.doze.DozeUtils;
 import org.lineageos.settings.refreshrate.RefreshUtils;
 
 import vendor.xiaomi.hardware.displayfeature.V1_0.IDisplayFeature;
