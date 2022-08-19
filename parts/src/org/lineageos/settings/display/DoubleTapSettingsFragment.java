@@ -65,7 +65,7 @@ public class DoubleTapSettingsFragment extends PreferenceFragment implements
     private void enableD2TW(int enable) {
         if (mTouchFeature == null) return;
         try {
-            mTouchFeature.setModeValue(14,enable);
+            mTouchFeature.setModeValue(0,14,enable);
             SharedPreferences preferences = getActivity().getSharedPreferences(SHAREDD2TW,Context.MODE_PRIVATE);
             SharedPreferences.Editor editor = preferences.edit();
              editor.putInt(SHAREDD2TW, enable);
