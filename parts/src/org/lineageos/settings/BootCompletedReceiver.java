@@ -27,7 +27,6 @@ import org.lineageos.settings.dirac.DiracUtils;
 import org.lineageos.settings.chec.DozeUtils;
 import org.lineageos.settings.refreshrate.RefreshUtils;
 
-import vendor.xiaomi.hardware.touchfeature.V1_0.ITouchFeature;
 import vendor.xiaomi.hardware.displayfeature.V1_0.IDisplayFeature;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
@@ -35,26 +34,19 @@ public class BootCompletedReceiver extends BroadcastReceiver {
     private static final boolean DEBUG = false;
     private static final String TAG = "XiaomiParts";
 
-    public static final String SHAREDD2TW = "sharadeD2TW";
-    private ITouchFeature mTouchFeature;
+    public static final String SHAREDDCDIMMING = "sharadeDCDimming";
+
     private IDisplayFeature mDisplayFeature;
 
     @Override
     public void onReceive(final Context context, Intent intent) {
 
-        //Micro-Service to restore sata of dt2w/dcdimming on reboot
-        SharedPreferences prefsDT2W = context.getSharedPreferences(SHAREDD2TW, Context.MODE_PRIVATE);
+        //Micro-Service to restore sata of dcdimming on reboot
         SharedPreferences prefsDCDIMMING = context.getSharedPreferences(SHAREDDCDIMMING, Context.MODE_PRIVATE);
 
         try {
-
-            //dt2w
-            mTouchFeature = ITouchFeature.getService();
-            mTouchFeature.setModeValue(0,14,prefsDT2W.getInt(SHAREDD2TW, 1));
-            
-            //dcdimming
             mDisplayFeature = IDisplayFeature.getService();
-            mTouchFeature.setFeature(0,20,prefsDT2W.getInt(SHAREDDCDIMMING, 1),255);
+            mDisplayFeature.setFeature(0,20,prefsDCDIMMING.getInt(SHAREDDCDIMMING, 1),255);
         } catch (Exception e) {
             // Do nothing
         }
