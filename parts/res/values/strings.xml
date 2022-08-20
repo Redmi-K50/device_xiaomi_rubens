@@ -76,8 +76,8 @@
     <string name="refresh_rate_tile_title">Refresh Rate</string>
 
     <!-- DC dimming -->
-    <string name="dc_dimming_enable_title">DC Dimming</string>
-    <string name="dc_dimming_enable_summary">Reduces eye strain in low light conditions</string>
+    <string name="dc_dimming_enable_title">Anti-flicker mode</string>
+    <string name="dc_dimming_enable_summary">Prevent extensive flickering and reduce eye strain in low light eonditions</string>
 
     <!-- Clear Speaker -->
     <string name="clear_speaker_title">Clear speaker</string>

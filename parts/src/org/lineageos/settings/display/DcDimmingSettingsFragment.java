@@ -34,7 +34,7 @@ public class DcDimmingSettingsFragment extends PreferenceFragment implements
         OnPreferenceChangeListener {
 
     private static final String DCDIMMING_ENABLE_KEY = "dc_dimming_enable";
-    public static final String SHAREDDCDIMMING = "sharadeDCDimming";
+    public static final String SHAREDDCDIMMING = "sharedDCDimming";
 
     private SwitchPreference mDCDimmingPreference;
     private IDisplayFeature mDisplayFeature;
@@ -44,7 +44,7 @@ public class DcDimmingSettingsFragment extends PreferenceFragment implements
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
       addPreferencesFromResource(R.xml.dcdimming_settings);
         getActivity().getActionBar().setDisplayHomeAsUpEnabled(true);
-       try {
+        try {
             mDisplayFeature = IDisplayFeature.getService();
         } catch (Exception e) {
             // Do nothing

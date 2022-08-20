@@ -62,7 +62,7 @@
 
     <!-- GPU -->
     <string name="gpu_title">GPU 调校</string>
-    <string name="gpu_summary">调整GPU最高频率或调度</string>
+    <string name="gpu_summary">调整 GPU 最高频率或调度</string>
 
     <string name="gpu_governor">GPU 调度器</string>
     <string name="gpu_governor_default">默认 (dummy)</string>
@@ -76,8 +76,8 @@
     <string name="refresh_rate_tile_title">刷新率</string>
 
     <!-- DC Dimming -->
-    <string name="dc_dimming_enable_title">DC 调光</string>
-    <string name="dc_dimming_enable_summary">减少低亮度下眼睛的疲劳</string>
+    <string name="dc_dimming_enable_title">防闪烁模式</string>
+    <string name="dc_dimming_enable_summary">在低亮度下防止屏幕闪烁，降低视觉疲劳</string>
 
     <!-- Clear Speaker -->
     <string name="clear_speaker_title">扬声器清理</string>

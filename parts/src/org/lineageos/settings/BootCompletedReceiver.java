@@ -34,7 +34,7 @@ public class BootCompletedReceiver extends BroadcastReceiver {
     private static final boolean DEBUG = false;
     private static final String TAG = "XiaomiParts";
 
-    public static final String SHAREDDCDIMMING = "sharadeDCDimming";
+    public static final String SHAREDDCDIMMING = "sharedDCDimming";
 
     private IDisplayFeature mDisplayFeature;
 
