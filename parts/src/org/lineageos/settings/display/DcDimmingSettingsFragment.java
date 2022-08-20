@@ -33,7 +33,7 @@ import vendor.xiaomi.hardware.displayfeature.V1_0.IDisplayFeature;
 public class DcDimmingSettingsFragment extends PreferenceFragment implements
         OnPreferenceChangeListener {
 
-    private static final String DCDIMMING_ENABLE_KEY = "dcdimming_enable";
+    private static final String DCDIMMING_ENABLE_KEY = "dc_dimming_enable";
     public static final String SHAREDDCDIMMING = "sharadeDCDimming";
 
     private SwitchPreference mDCDimmingPreference;
