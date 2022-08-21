@@ -22,7 +22,7 @@ It was released in March 2022.
 ## Device Picture
 ![Redmi K50](https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1653381863.47942179.png)
 
-## Patches Needed
+## Patches
 
 ### Telephony
 > https://gerrit.pixelexperience.org/c/frameworks_opt_telephony/+/15476
@@ -39,7 +39,7 @@ It was released in March 2022.
 
 > Added by yourself: device/xiaomi/rubens/prebuilts/<b>vendor.img</b>; device/xiaomi/rubens/prebuilts/<b>odm.img</b>; vendor/xiaomi/rubens/proprietary/priv-app/MiuiCamera/<b>MiuiCamera.apk</b>(This file is larger than 100 MB, or you can clone it with Git LFS)
 
-> Patch: [Patches Needed](https://github.com/YuKongA/device_xiaomi_rubens-prebuilt/blob/lineage-19.1/README.md?plain=1#L25-L33)
+> Patch: [Patches Needed](#Patches)
 
 > lunch lineage_rubens-userdebug
 
@@ -50,7 +50,7 @@ It was released in March 2022.
 
 > Added by yourself: vendor/xiaomi/rubens/proprietary/priv-app/MiuiCamera/<b>MiuiCamera.apk</b>(This file is larger than 100 MB, or you can clone it with Git LFS)
 
-> Patch: [Patches Needed](https://github.com/YuKongA/device_xiaomi_rubens-prebuilt/blob/lineage-19.1/README.md?plain=1#L25-L33), [Drop import prebuilt vendor/odm image](https://github.com/YuKongA/device_xiaomi_rubens-prebuilt/commit/96060cfb8e85fa1a1e6728c68d08b36db233fa5d)
+> Patch: [Patches Needed](#Patches), [Drop import prebuilt vendor/odm image](https://github.com/YuKongA/device_xiaomi_rubens-prebuilt/commit/96060cfb8e85fa1a1e6728c68d08b36db233fa5d)
 
 > lunch lineage_rubens-userdebug
 
