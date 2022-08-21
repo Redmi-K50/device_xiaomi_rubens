@@ -1,6 +1,6 @@
 runtime_resource_overlay {
-    name: "FrameworkResOverlay",
-    theme: "FrameworkResOverlay",
+    name: "RubensFrameworkResOverlay",
+    theme: "RubensFrameworkResOverlay",
     sdk_version: "current",
     product_specific: true
 }
