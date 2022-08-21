@@ -8,14 +8,14 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit from the AcmeUI configuration.
+$(call inherit-product, vendor/acme/config/mobile.mk)
 
 # Inherit from rubens device
 $(call inherit-product, device/xiaomi/rubens/device.mk)
 
 PRODUCT_DEVICE := rubens
-PRODUCT_NAME := lineage_rubens
+PRODUCT_NAME := acme_rubens
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := 22041211AC
 PRODUCT_MANUFACTURER := Xiaomi
@@ -30,6 +30,8 @@ TARGET_BOOT_ANIMATION_RES := 1440
 TARGET_SCREEN_DENSITY := 560
 
 TARGET_SUPPORTS_QUICK_TAP := true
+
+WITH_GMS := true
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
