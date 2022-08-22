@@ -29,15 +29,15 @@ android_app {
     },
 
     required: [
-        "privapp-permissions_co.potatoproject.dt2w.MT6895",
+        "privapp-permissions_org.lineageos.dt2w.MT6895",
         "xiaomi-touch"
     ]
 }
 
 prebuilt_etc {
-    name: "privapp-permissions_co.potatoproject.dt2w.MT6895",
+    name: "privapp-permissions_org.lineageos.dt2w.MT6895",
     sub_dir: "permissions",
-    src: "privapp-permissions_co.potatoproject.dt2w.MT6895.xml",
+    src: "privapp-permissions_org.lineageos.dt2w.MT6895.xml",
     filename_from_src: true,
 }
 
