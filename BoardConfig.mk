@@ -75,7 +75,7 @@ BOARD_USES_GENERIC_KERNEL_IMAGE := true
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilts/kernel
 
 TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_SOURCE := kernel/xiaomi/mt6895-common
+TARGET_KERNEL_SOURCE := kernel/xiaomi/mt6895
 TARGET_KERNEL_CONFIG := mikrn_rubens_stability_defconfig
 
 BOARD_BOOT_HEADER_VERSION := 4
