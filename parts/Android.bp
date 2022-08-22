@@ -28,4 +28,18 @@ android_app {
     optimize: {
         proguard_flags_files: ["proguard.flags"],
     },
+
+    required: [
+        "disp_feature"
+    ]
+}
+
+cc_binary {
+	name: "disp_feature",
+	srcs: [
+		"disp_feature.cpp",
+	],
+    header_libs: [
+        "generated_kernel_headers",
+    ],
 }

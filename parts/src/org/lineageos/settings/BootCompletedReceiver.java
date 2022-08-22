@@ -27,8 +27,6 @@ import org.lineageos.settings.dirac.DiracUtils;
 import org.lineageos.settings.doze.DozeUtils;
 import org.lineageos.settings.refreshrate.RefreshUtils;
 
-import vendor.xiaomi.hardware.displayfeature.V1_0.IDisplayFeature;
-
 public class BootCompletedReceiver extends BroadcastReceiver {
 
     private static final boolean DEBUG = false;
@@ -36,21 +34,8 @@ public class BootCompletedReceiver extends BroadcastReceiver {
 
     public static final String SHAREDDCDIMMING = "sharedDCDimming";
 
-    private IDisplayFeature mDisplayFeature;
-
     @Override
     public void onReceive(final Context context, Intent intent) {
-
-        //Micro-Service to restore sata of dcdimming on reboot
-        SharedPreferences prefsDCDIMMING = context.getSharedPreferences(SHAREDDCDIMMING, Context.MODE_PRIVATE);
-
-        try {
-            mDisplayFeature = IDisplayFeature.getService();
-            mDisplayFeature.setFeature(0,20,prefsDCDIMMING.getInt(SHAREDDCDIMMING, 1),255);
-        } catch (Exception e) {
-            // Do nothing
-        }
-
         if (DEBUG) Log.d(TAG, "Received boot completed intent");
         DozeUtils.checkDozeService(context);
         DiracUtils.initialize(context);
