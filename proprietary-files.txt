@@ -75,6 +75,7 @@ system_ext/lib64/vendor.mediatek.hardware.bluetooth.audio@2.2.so
 
 # Camera
 lib/vendor.mediatek.hardware.camera.isphal@1.0.so
+lib64/vendor.mediatek.hardware.camera.isphal@1.0.so
 
 # CCCI
 lib64/libccci_util_sys.so
@@ -168,6 +169,19 @@ lib64/libsysenv_system.so
 -priv-app/ImsService/ImsService.apk
 system_ext/lib/vendor.mediatek.hardware.videotelephony@1.0.so
 system_ext/lib64/vendor.mediatek.hardware.videotelephony@1.0.so
+
+# Radio
+system_ext/lib/vendor.mediatek.hardware.mtkradioex@3.0.so
+system_ext/lib64/vendor.mediatek.hardware.mtkradioex@3.0.so
+
+# TER Service
+bin/terservice
+etc/init/terserver.rc
+lib64/libterservice.so
+
+# Vibrator
+lib/libvibratorservice.so|994b508f8eb893d25314932eab83e9235bafca5e
+lib64/libvibratorservice.so|97b96add9c77a1dcba13dcad23031906197b7c82
 
 # YGPS
 -priv-app/YGPS/YGPS.apk
