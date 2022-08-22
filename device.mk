@@ -159,8 +159,7 @@ PRODUCT_PACKAGES += \
     TetheringOVerlay \
     WifiOverlay \
     SystemUIOverlay \
-    SettingsOverlay \
-    NotchBarKiller
+    SettingsOverlay
 
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
