@@ -1,4 +1,4 @@
-package co.potatoproject.dt2w.MT6895;
+package org.lineageos.dt2w.MT6895;
 
 import android.app.Service;
 import android.content.ContentResolver;
