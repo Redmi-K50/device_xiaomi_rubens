@@ -1,0 +1,9 @@
+type xiaomi_display, domain, coredomain;
+type xiaomi_display_exec, file_type, exec_type, system_file_type;
+
+type vendor_displayfeature_device, dev_type;
+
+init_daemon_domain(xiaomi_display)
+
+allow xiaomi_display vendor_displayfeature_device:dir r_dir_perms;
+allow xiaomi_display vendor_displayfeature_device:chr_file rw_file_perms;

@@ -167,6 +167,10 @@ PRODUCT_PACKAGES += \
     SettingsOverlay \
     NotchBarKiller
 
+PRODUCT_PACKAGES += \
+    FrameworkResOverlay \
+    FrameworkResOverlayExt
+
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
