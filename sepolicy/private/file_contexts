@@ -6,9 +6,11 @@
 /system/bin/hw/android\.hardware\.lights-service\.mediatek u:object_r:hal_light_default_exec:s0
 /(product|system/product)/vendor_overlay/[0-9]+/bin/hw/android\.hardware\.lights-service\.mediatek u:object_r:hal_light_default_exec:s0
 
-# Xiaomi display feature
+# Xiaomi display
 /system/bin/disp_feature   u:object_r:xiaomi_display_exec:s0
 /dev/mi_display/disp_feature   u:object_r:vendor_displayfeature_device:s0
+/sys/class/mi_display/disp-DSI-+[0-1](/.*)?                                u:object_r:vendor_sysfs_displayfeature:s0
+/sys/devices/virtual/mi_display/disp_feature/disp-DSI-+[0-1](/.*)?         u:object_r:vendor_sysfs_displayfeature:s0
 
 # Xiaomi touch
 /system/bin/xiaomi-touch   u:object_r:xiaomi_touch_exec:s0
