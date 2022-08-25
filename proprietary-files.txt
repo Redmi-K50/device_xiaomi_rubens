@@ -75,6 +75,7 @@ system_ext/lib64/vendor.mediatek.hardware.bluetooth.audio@2.2.so
 
 # Camera
 lib/vendor.mediatek.hardware.camera.isphal@1.0.so
+lib64/vendor.mediatek.hardware.camera.isphal@1.0.so
 
 # CCCI
 lib64/libccci_util_sys.so
@@ -133,7 +134,6 @@ lib64/libmotion_photo_c++_shared.so
 lib64/libmotion_photo_mace.so
 lib64/libmotion_photo.so
 lib64/libmtkisp_metadata_sys.so
-lib64/vendor.mediatek.hardware.camera.isphal@1.0.so
 system_ext/lib64/vendor.mediatek.hardware.camera.atms@1.0.so
 
 # MMS
