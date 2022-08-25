@@ -13,7 +13,7 @@ on property:persist.sys.parts.gpu.max_frequency=*
 on property:persist.sys.MT6895.dt2w=*
     exec /system/bin/xiaomi-touch 14 ${persist.sys.MT6895.dt2w}
 
-property:persist.sys.parts.dc.enable=*
+on property:persist.sys.parts.dc.enable=*
     exec /system/bin/disp_feature 8 ${persist.sys.parts.dc.enable}
 
 service set_permissive /system/bin/set_permissive.sh
