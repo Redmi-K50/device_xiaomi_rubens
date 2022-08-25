@@ -22,6 +22,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.util.Log;
+import androidx.preference.PreferenceManager;
+import android.os.SystemProperties;
 
 import org.lineageos.settings.dirac.DiracUtils;
 import org.lineageos.settings.doze.DozeUtils;
@@ -31,14 +33,20 @@ public class BootCompletedReceiver extends BroadcastReceiver {
 
     private static final boolean DEBUG = false;
     private static final String TAG = "XiaomiParts";
-
-    public static final String SHAREDDCDIMMING = "sharedDCDimming";
+    private static final String DC_DIMMING_ENABLE_KEY = "dc_dimming_enable";
 
     @Override
     public void onReceive(final Context context, Intent intent) {
+        
         if (DEBUG) Log.d(TAG, "Received boot completed intent");
+
         DozeUtils.checkDozeService(context);
         DiracUtils.initialize(context);
         RefreshUtils.startService(context);
+
+        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
+        boolean dcDimmingEnabled = sharedPrefs.getBoolean(DC_DIMMING_ENABLE_KEY, false);
+        SystemProperties.set("persist.sys.parts.dc.enable", dcDimmingEnabled ? "1" : "0");
+
     }
 }

@@ -16,51 +16,38 @@
 
 package org.lineageos.settings.display;
 
-import android.os.Bundle;
 import android.content.Context;
+import android.os.Bundle;
 import androidx.preference.Preference;
-import android.content.SharedPreferences;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.PreferenceFragment;
 import androidx.preference.SwitchPreference;
-import android.provider.Settings;
 import android.os.SystemProperties;
 
-import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
-import com.android.settingslib.collapsingtoolbar.R;
+import org.lineageos.settings.R;
 
 public class DcDimmingSettingsFragment extends PreferenceFragment implements
         OnPreferenceChangeListener {
 
-    private static final String DCDIMMING_ENABLE_KEY = "dc_dimming_enable";
-    public static final String SHAREDDCDIMMING = "sharedDCDimming";
+    private static final String DC_DIMMING_ENABLE_KEY = "dc_dimming_enable";
 
     private SwitchPreference mDCDimmingPreference;
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-      addPreferencesFromResource(R.xml.dcdimming_settings);
+      addPreferencesFromResource(R.xml.dc_dimming_settings);
         getActivity().getActionBar().setDisplayHomeAsUpEnabled(true);
 
-        mDCDimmingPreference = (SwitchPreference) findPreference(DCDIMMING_ENABLE_KEY);
+        mDCDimmingPreference = (SwitchPreference) findPreference(DC_DIMMING_ENABLE_KEY);
         mDCDimmingPreference.setEnabled(true);
         mDCDimmingPreference.setOnPreferenceChangeListener(this);
-        enableDCDimming(1);
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (DCDIMMING_ENABLE_KEY.equals(preference.getKey())) {
-            enableDCDimming((Boolean) newValue ? 1 : 0);
+        if (DC_DIMMING_ENABLE_KEY.equals(preference.getKey())) {
+            SystemProperties.set("persist.sys.parts.dc.enable", (Boolean) newValue ? "1" : "0");
         }
         return true;
-    }
-
-    private void enableDCDimming(int enable) {
-        SystemProperties.set("persist.sys.parts.dc.enable", "" + enable);
-        SharedPreferences preferences = getActivity().getSharedPreferences(SHAREDDCDIMMING, Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = preferences.edit();
-        editor.putInt(SHAREDDCDIMMING, enable);
-        editor.commit();
     }
 }
