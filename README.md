@@ -35,7 +35,7 @@ It was released in March 2022.
 ## Building
 
 ### Complete zip
-> Needed: [device/xiaomi/rubens](https://github.com/YuKongA/device_xiaomi_rubens-prebuilt); [vendor/xiaomi/rubens](https://github.com/YuKongA/vendor_xiaomi_rubens-prebuilt)
+> Needed: [device/xiaomi/rubens](https://github.com/YuKongA/device_xiaomi_rubens-prebuilt); [vendor/xiaomi/rubens](https://github.com/YuKongA/vendor_xiaomi_rubens-prebuilt); [kernel/xiaomi/mt6895](https://github.com/wbs306/kernel_xiaomi_mt6895)
 
 > Added by yourself: device/xiaomi/rubens/prebuilts/<b>vendor.img</b>; device/xiaomi/rubens/prebuilts/<b>odm.img</b>; vendor/xiaomi/rubens/proprietary/priv-app/MiuiCamera/<b>MiuiCamera.apk</b>(This file is larger than 100 MB, or you can clone it with Git LFS)
 
@@ -46,7 +46,7 @@ It was released in March 2022.
 > mka bacon
 
 ### DSU sideloader
-> Needed: [device/xiaomi/rubens](https://github.com/YuKongA/device_xiaomi_rubens-prebuilt); [vendor/xiaomi/rubens](https://github.com/YuKongA/vendor_xiaomi_rubens-prebuilt)
+> Needed: [device/xiaomi/rubens](https://github.com/YuKongA/device_xiaomi_rubens-prebuilt); [vendor/xiaomi/rubens](https://github.com/YuKongA/vendor_xiaomi_rubens-prebuilt); [kernel/xiaomi/mt6895](https://github.com/wbs306/kernel_xiaomi_mt6895)
 
 > Added by yourself: vendor/xiaomi/rubens/proprietary/priv-app/MiuiCamera/<b>MiuiCamera.apk</b>(This file is larger than 100 MB, or you can clone it with Git LFS)
 
@@ -55,7 +55,6 @@ It was released in March 2022.
 > lunch lineage_rubens-userdebug
 
 > mka systemimage && mka productimage && cd $OUT && zip dsu.zip system.img product.img
-
 
 ## Credits
 This tree based on Redmi Note 11T Pro+(xaga) of @wbs306
