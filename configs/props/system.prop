@@ -48,3 +48,6 @@ wifi.tethering.interface=ap0
 # RIL
 vendor.rild.libargs=-d /dev/ttyC0
 vendor.rild.libpath=mtk-ril.so
+
+# Log
+persist.log.tag.gralloc4=S
