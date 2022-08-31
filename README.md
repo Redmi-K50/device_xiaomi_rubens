@@ -1,5 +1,5 @@
 Copyright (C) 2022 The LineageOS Project
-# Device tree for Redmi K50 (rubens) - Prebuilt
+# Device tree for Redmi K50 (rubens) - OSS
 
 The Redmi K50 (codenamed _"rubens"_) is a high-end, mid-range smartphone from Xiaomi.
 
@@ -31,30 +31,6 @@ It was released in March 2022.
 > https://gerrit.pixelexperience.org/c/frameworks_opt_net_ims/+/15318
 
 > https://gerrit.pixelexperience.org/c/frameworks_opt_net_ims/+/15317
-
-## Building
-
-### Complete zip
-> Needed: [device/xiaomi/rubens](https://github.com/YuKongA/device_xiaomi_rubens-prebuilt); [vendor/xiaomi/rubens](https://github.com/YuKongA/vendor_xiaomi_rubens-prebuilt); [kernel/xiaomi/mt6895](https://github.com/wbs306/kernel_xiaomi_mt6895)
-
-> Added by yourself: device/xiaomi/rubens/prebuilts/<b>vendor.img</b>; device/xiaomi/rubens/prebuilts/<b>odm.img</b>; vendor/xiaomi/rubens/proprietary/priv-app/MiuiCamera/<b>MiuiCamera.apk</b>(This file is larger than 100 MB, or you can clone it with Git LFS)
-
-> Patch: [Patches Needed](#Patches)
-
-> lunch lineage_rubens-userdebug
-
-> mka bacon
-
-### DSU sideloader
-> Needed: [device/xiaomi/rubens](https://github.com/YuKongA/device_xiaomi_rubens-prebuilt); [vendor/xiaomi/rubens](https://github.com/YuKongA/vendor_xiaomi_rubens-prebuilt); [kernel/xiaomi/mt6895](https://github.com/wbs306/kernel_xiaomi_mt6895)
-
-> Added by yourself: vendor/xiaomi/rubens/proprietary/priv-app/MiuiCamera/<b>MiuiCamera.apk</b>(This file is larger than 100 MB, or you can clone it with Git LFS)
-
-> Patch: [Patches Needed](#Patches), [Drop import prebuilt vendor/odm image](https://github.com/YuKongA/device_xiaomi_rubens-prebuilt/commit/96060cfb8e85fa1a1e6728c68d08b36db233fa5d)
-
-> lunch lineage_rubens-userdebug
-
-> mka systemimage && mka productimage && cd $OUT && zip dsu.zip system.img product.img
 
 ## Credits
 This tree based on Redmi Note 11T Pro+(xaga) of @wbs306

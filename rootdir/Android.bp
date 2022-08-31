@@ -5,7 +5,15 @@
 //
 
 prebuilt_etc {
-    name: "fstab.mt6895",
-    src: "etc/fstab.mt6895",
+    name: "init.project.rc",
+    src: "etc/init.project.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "meta_init.rc",
+    src: "etc/meta_init.rc",
+    sub_dir: "init/hw",
     vendor: true,
 }
