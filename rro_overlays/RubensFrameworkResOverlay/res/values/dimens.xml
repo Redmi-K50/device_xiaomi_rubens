@@ -23,4 +23,7 @@
     <dimen name="status_bar_height_portrait">104.0px</dimen>
     <dimen name="status_bar_height_landscape">104.0px</dimen>
 
+    <!-- Default radius of the software rounded corners. -->
+    <dimen name="rounded_corner_radius">132.0px</dimen>
+
 </resources>
