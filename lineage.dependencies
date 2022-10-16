@@ -1,20 +1,32 @@
 [
- {
-   "repository"  : "device_mediatek_sepolicy_vndr",
-   "target_path" : "device/mediatek/sepolicy_vndr",
-   "remote"      : "pixel",
-   "branch"      : "twelve-plus"
+   {
+   "repository"  : "YuKongA/vendor_xiaomi_mt6895-common",
+   "target_path" : "vendor/xiaomi/mt6895-common",
+   "remote"      : "github",
+   "branch"      : "12.1"
+ },
+  {
+   "repository"  : "YuKongA/vendor_xiaomi_rubens",
+   "target_path" : "vendor/xiaomi/rubens",
+   "remote"      : "github",
+   "branch"      : "oss"
  },
  {
-   "repository"  : "wbs306/device_xiaomi_mt6895-common",
+   "repository"  : "YuKongA/device_xiaomi_mt6895-common",
    "target_path" : "device/xiaomi/mt6895-common",
    "remote"      : "github",
-   "branch"      : "twelve-plus"
+   "branch"      : "12.1"
  },
  {
    "repository"  : "wbs306/kernel_xiaomi_mt6895",
    "target_path" : "kernel/xiaomi/mt6895",
    "remote"      : "github",
    "branch"      : "12.1"
+ },
+{
+   "repository"  : "PixelExperience/device_mediatek_sepolicy_vndr",
+   "target_path" : "device/mediatek/sepolicy_vndr",
+   "remote"      : "github",
+   "branch"      : "twelve"
  },
 ]
