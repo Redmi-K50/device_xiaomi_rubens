@@ -1,3 +1,5 @@
+# Unpinned blobs from rubens-user 12 SP1A.210812.016 V13.0.22.0.SLNCNXM release-keys
+
 # Audio param
 vendor/etc/audio_param/AudioParamOptions_mgvi.xml
 vendor/etc/audio_param/AudioParamOptions_vext.xml
