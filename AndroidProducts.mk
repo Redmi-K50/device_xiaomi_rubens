@@ -1,13 +1,13 @@
 #
-# Copyright (C) 2022 The LineageOS Project
+# Copyright (C) 2022 The arrowOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_rubens.mk
+    $(LOCAL_DIR)/arrow_rubens.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_rubens-user \
-    lineage_rubens-userdebug \
-    lineage_rubens-eng
+    arrow_rubens-user \
+    arrow_rubens-userdebug \
+    arrow_rubens-eng
