@@ -1,4 +1,3 @@
-Copyright (C) 2022 The LineageOS Project
 # Device tree for Redmi K50 (rubens) - OSS
 
 The Redmi K50 (codenamed _"rubens"_) is a high-end, mid-range smartphone from Xiaomi.
@@ -24,13 +23,24 @@ It was released in March 2022.
 
 ## Patches
 
-### Telephony
-> https://gerrit.pixelexperience.org/c/frameworks_opt_telephony/+/15476
 
-### Ims
-> https://gerrit.pixelexperience.org/c/frameworks_opt_net_ims/+/15318
+## Building
 
-> https://gerrit.pixelexperience.org/c/frameworks_opt_net_ims/+/15317
+### Complete zip
+> Needed: [device/xiaomi/rubens](https://github.com/Redmi-K50/device_xiaomi_rubens); [vendor/xiaomi/rubens](https://github.com/Redmi-K50/vendor_xiaomi_rubens); [kernel/xiaomi/mt6895](https://github.com/wbs306/kernel_xiaomi_mt6895); [device/xiaomi/mt6895-common](https://github.com/Redmi-K50/device_xiaomi_mt6895-common); [vendor/xiaomi/mt6895-common](https://github.com/Redmi-K50/vendor_xiaomi_mt6895-common)
+
+> Patch: [Patches Needed](#Patches)
+
+> lunch arrow_rubens-userdebug
+
+> m bacon
+
+### DSU sideloader
+> [device/xiaomi/rubens](https://github.com/Redmi-K50/device_xiaomi_rubens); [vendor/xiaomi/rubens](https://github.com/Redmi-K50/vendor_xiaomi_rubens); [kernel/xiaomi/mt6895](https://github.com/wbs306/kernel_xiaomi_mt6895); [device/xiaomi/mt6895-common](https://github.com/Redmi-K50/device_xiaomi_mt6895-common); [vendor/xiaomi/mt6895-common](https://github.com/Redmi-K50/vendor_xiaomi_mt6895-common)
+
+> lunch arrow_rubens-userdebug
+
+> m systemimage && m productimage && m odmimage && m vendorimage cd $OUT && zip dsu.zip system.img product.img odm.img vendor.img
 
 ## Credits
 This tree based on Redmi Note 11T Pro+(xaga) of @wbs306
